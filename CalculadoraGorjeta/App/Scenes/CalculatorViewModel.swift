@@ -1,5 +1,5 @@
 //
-//  TipViewModel.swift
+//  CalculatorViewModel.swift
 //  CalculadoraGorjeta
 //
 //  Created by Diggo Silva on 24/02/26.
@@ -16,7 +16,7 @@ enum Tip {
     case customTip(Double)
 }
 
-final class TipViewModel {
+final class CalculatorViewModel {
     
     // inputs
     var billAmount: Double = 0
