@@ -73,7 +73,7 @@ final class CalculatorViewModel {
         var totalPerPerson: Double
         
         switch tipPercentage {
-        case .zeroPercent: totalTip = billAmount
+        case .zeroPercent: totalTip = 0
         case .tenPercent: totalTip = billAmount * 0.10
         case .fifteenPercent: totalTip = billAmount * 0.15
         case .twentyPercent: totalTip = billAmount * 0.20
@@ -82,7 +82,7 @@ final class CalculatorViewModel {
         }
         
         totalAmount = billAmount + totalTip
-        totalPerPerson = billAmount / (Double(numberOfPeople))
+        totalPerPerson = totalAmount / (Double(numberOfPeople))
         
         totalAmountText = formatCurrency(totalAmount)
         totalTipText = formatCurrency(totalTip)
