@@ -16,18 +16,31 @@ enum Tip {
     case customTip(Double)
 }
 
-final class CalculatorViewModel {
+protocol CalculatorViewModelProtocol {
+    var totalAmountText: String { get }
+    var totalTipText: String { get }
+    var totalPerPersonText: String { get }
+    var numberOfPeople: Int { get }
+    var isValidAmount: Bool { get }
+    
+    func setBillAmount(_ amount: Double)
+    func setTipAmount(_ tip: Tip)
+    func decreasePeopleCount()
+    func increasePeopleCount()
+}
+
+final class CalculatorViewModel: CalculatorViewModelProtocol {
     
     // inputs
-    var billAmount: Double = 0
-    var tipPercentage: Tip = .zeroPercent
-    var numberOfPeople: Int = 1
-    var isValidAmount: Bool = false
+    private var billAmount: Double = 0
+    private var tipPercentage: Tip = .zeroPercent
+    private(set) var numberOfPeople: Int = 1
+    private(set) var isValidAmount: Bool = false
     
     // outputs
-    var totalAmountText: String = "R$0,00"
-    var totalTipText: String = "R$0,00"
-    var totalPerPersonText: String = "R$0,00"
+    private(set) var totalAmountText: String = "R$0,00"
+    private(set) var totalTipText: String = "R$0,00"
+    private(set) var totalPerPersonText: String = "R$0,00"
     
     func setBillAmount(_ amount: Double) {
         billAmount = amount
