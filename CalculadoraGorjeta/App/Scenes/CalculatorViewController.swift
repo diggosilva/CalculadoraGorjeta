@@ -10,7 +10,14 @@ import UIKit
 class CalculatorViewController: UIViewController {
     
     private let contentView = CalculatorView()
-    private let viewModel = CalculatorViewModel()
+    private let viewModel: CalculatorViewModel
+    
+    init(viewModel: CalculatorViewModel = CalculatorViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     override func loadView() {
         view = contentView
