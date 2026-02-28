@@ -49,6 +49,6 @@ final class CalculatorView: UIView {
         contentContainerView.layer.cornerRadius = 32
         contentContainerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         contentContainerView.layer.masksToBounds = true
-        backgroundColor = .systemGreen
+        backgroundColor = .mainAppColor
     }
 }

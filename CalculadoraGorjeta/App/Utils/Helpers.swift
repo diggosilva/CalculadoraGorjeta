@@ -36,7 +36,7 @@ func buildButton(title: String = "", titleColor: UIColor = .black, fontSize: CGF
     
     button.configurationUpdateHandler = { button in
         if button.isSelected {
-            button.configuration?.baseBackgroundColor = .systemGreen
+            button.configuration?.baseBackgroundColor = .mainAppColor
             button.configuration?.baseForegroundColor = .white
         } else {
             button.configuration?.baseBackgroundColor = .white
@@ -62,7 +62,7 @@ func buildMinusPlusButton(systemNameImage: String, target: Any?, selector: Selec
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setImage(UIImage(systemName: systemNameImage), for: .normal)
     button.tintColor = .white
-    button.backgroundColor = .systemGreen
+    button.backgroundColor = .mainAppColor
     button.addTarget(target, action: selector, for: .touchUpInside)
     button.layer.cornerRadius = 16
     return button
@@ -89,7 +89,7 @@ func buildShareButton(target: Any?, selector: Selector) -> UIButton {
     let imageConfig = UIImage.SymbolConfiguration(pointSize: 12, weight: .bold)
     configuration.image = UIImage(systemName: "square.and.arrow.up.fill", withConfiguration: imageConfig)
     
-    configuration.baseBackgroundColor = .systemGreen
+    configuration.baseBackgroundColor = .mainAppColor
     configuration.baseForegroundColor = .white
     configuration.title = "Compartilhar"
     configuration.imagePlacement = .trailing
