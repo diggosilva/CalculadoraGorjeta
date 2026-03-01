@@ -50,16 +50,16 @@ class ContentContainerView: UIView {
     // MARK: Total Tip Value & Total Per Person Value
     lazy var totalTipValueContainer = buildContainer()
     lazy var totalTipLabel = buildLabel(text: "GORJETA TOTAL", textColor: .gray, font: .boldSystemFont(ofSize: 12))
-    lazy var totalTipValue = buildLabel(text: "R$0,00", font: .boldSystemFont(ofSize: 24))
+    lazy var totalTipValue = buildLabel(text: .defaultValue, font: .boldSystemFont(ofSize: 24))
     
     lazy var totalPerPersonValueContainer = buildContainer()
     lazy var totalPerPersonLabel = buildLabel(text: "POR PESSOA", textColor: .gray, font: .boldSystemFont(ofSize: 12))
-    lazy var totalPerPersonValue = buildLabel(text: "R$0,00", textColor: .mainAppColor, font: .boldSystemFont(ofSize: 24))
+    lazy var totalPerPersonValue = buildLabel(text: .defaultValue, textColor: .mainAppColor, font: .boldSystemFont(ofSize: 24))
     
     // MARK: Grand Total
     lazy var grandTotalContainer = buildContainer(backgroundColor: .black.withAlphaComponent(0.8))
     lazy var grandTotalLabel = buildLabel(text: "TOTAL GERAL", textColor: .gray, font: .boldSystemFont(ofSize: 12))
-    lazy var grandTotalValue = buildLabel(text: "R$0,00", textColor: .white, font: .boldSystemFont(ofSize: 32))
+    lazy var grandTotalValue = buildLabel(text: .defaultValue, textColor: .white, font: .boldSystemFont(ofSize: 32))
     lazy var shareButton = buildShareButton(target: self, selector: #selector(tappedShare))
     
     // MARK: Tip Bittons
