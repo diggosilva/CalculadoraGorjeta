@@ -25,7 +25,7 @@ class HeaderView: UIView {
         tf.minimumFontSize = 24
         
         tf.attributedPlaceholder = NSAttributedString(
-            string: "R$0,00",
+            string: .defaultValue,
             attributes: [
                 .foregroundColor: UIColor.white.withAlphaComponent(0.5),
                 .font: UIFont.systemFont(ofSize: 48, weight: .bold)
