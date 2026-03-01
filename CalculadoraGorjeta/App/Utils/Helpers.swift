@@ -92,6 +92,7 @@ func buildShareButton(target: Any?, selector: Selector) -> UIButton {
     configuration.baseBackgroundColor = .mainAppColor
     configuration.baseForegroundColor = .white
     configuration.title = "Compartilhar"
+    configuration.titleLineBreakMode = .byWordWrapping
     configuration.imagePlacement = .trailing
     configuration.imagePadding = 5
     let button = UIButton(configuration: configuration)
