@@ -10,3 +10,7 @@ import UIKit
 extension UIColor {
     static let mainAppColor: UIColor = .systemBlue
 }
+
+extension String {
+    static let defaultValue: String = "R$0,00"
+}
