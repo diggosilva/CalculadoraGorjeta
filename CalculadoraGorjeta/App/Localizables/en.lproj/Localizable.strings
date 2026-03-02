@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  CalculadoraGorjeta
+
+  Created by Diggo Silva on 02/03/26.
+  
+*/
+
+// MARK: HeaderView
+"total_amount_label" = "TOTAL BILL AMOUNT";
+"total_people_label" = "1 Person";
+
+// MARK: ContentContainerView
+"tip_percentage_label" = "Tip Percentage";
+"custom_tip_button" = "Custom";
+"split_bill_label" = "Split Bill";
+"total_tip_label" = "TOTAL TIP";
+"total_per_person_label" = "PER PERSON";
+"grand_total_label" = "GRAND TOTAL";
+
+// MARK: CalculatorViewController
+"title" = "Tip Calculator";
+
+// MARK: showCustomTipAlert
+"title_alert" = "Custom Tip";
+"message_alert" = "Please enter the tip amount. Example: 30.00";
+"placeholder_alert" = "Example: 30.00";
+"ok_button" = "Confirm";
+"cancel_button" = "Cancel";
