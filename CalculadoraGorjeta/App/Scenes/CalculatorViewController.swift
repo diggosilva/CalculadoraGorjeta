@@ -30,7 +30,7 @@ class CalculatorViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationItem.title = "Gorjeta"
+        navigationItem.title = L10n.Calculator.title
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -98,12 +98,12 @@ extension CalculatorViewController: ContentContainerViewDelegate {
     }
     
     private func showCustomTipAlert() {
-        let alert = UIAlertController(title: "Gorjeta customizada", message: "Seja gentil e digite o valor da gorjeta. Ex: 30,00", preferredStyle: .alert)
+        let alert = UIAlertController(title: L10n.Alert.title, message: L10n.Alert.message, preferredStyle: .alert)
         alert.addTextField { (textField) in
-            textField.placeholder = "Ex: 30,00"
+            textField.placeholder = L10n.Alert.placeholder
             textField.keyboardType = .decimalPad
             
-            let ok = UIAlertAction(title: "Confirmar", style: .default) { [weak self] _ in
+            let ok = UIAlertAction(title: L10n.Alert.ok, style: .default) { [weak self] _ in
                 guard let self = self,
                     let text = textField.text, !text.isEmpty,
                       let value = Double(text.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)) else {
@@ -113,7 +113,7 @@ extension CalculatorViewController: ContentContainerViewDelegate {
                 setupUI()
             }
             alert.addAction(ok)
-            alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: L10n.Alert.cancel, style: .cancel, handler: nil))
         }
         present(alert, animated: true)
     }
