@@ -30,8 +30,8 @@ class ContentContainerView: UIView {
     }()
     
     // MARK: Tip Percentage
-    lazy var tipPercentageLabel = buildLabel(text: "Porcentagem da gorjeta", font: .boldSystemFont(ofSize: 16))
-    lazy var customTipButton = buildButton(title: "Personalizado", titleColor: .gray, fontSize: 12, cornerRadius: 10, target: self, selector: #selector(tappedCustom))
+    lazy var tipPercentageLabel = buildLabel(text: L10n.ContentContainerView.tipPercentage, font: .boldSystemFont(ofSize: 16))
+    lazy var customTipButton = buildButton(title: L10n.ContentContainerView.customTip, titleColor: .gray, fontSize: 12, cornerRadius: 10, target: self, selector: #selector(tappedCustom))
     lazy var tenPercentButton = buildButton(title: "10%", target: self, selector: #selector(tapped10))
     lazy var fifteenPercentButton = buildButton(title: "15%", target: self, selector: #selector(tapped15))
     lazy var twentyPercentButton = buildButton(title: "20%", target: self, selector: #selector(tapped20))
@@ -40,7 +40,7 @@ class ContentContainerView: UIView {
     lazy var buttonStack = buildStack(arrangedSubviews: [tenPercentButton, fifteenPercentButton, twentyPercentButton, twentyFivePercentButton])
     
     // MARK: Split Bill
-    lazy var splitBillLabel = buildLabel(text: "Conta dividida", font: .boldSystemFont(ofSize: 16))
+    lazy var splitBillLabel = buildLabel(text: L10n.ContentContainerView.splitBill, font: .boldSystemFont(ofSize: 16))
     
     lazy var splitBillContainer = buildContainer()
     lazy var minusButton = buildMinusPlusButton(systemNameImage: "minus", target: self, selector: #selector(tappedMinus))
@@ -49,16 +49,16 @@ class ContentContainerView: UIView {
     
     // MARK: Total Tip Value & Total Per Person Value
     lazy var totalTipValueContainer = buildContainer()
-    lazy var totalTipLabel = buildLabel(text: "GORJETA TOTAL", textColor: .gray, font: .boldSystemFont(ofSize: 12))
+    lazy var totalTipLabel = buildLabel(text: L10n.ContentContainerView.totalTip, textColor: .gray, font: .boldSystemFont(ofSize: 12))
     lazy var totalTipValue = buildLabel(text: .defaultValue, font: .boldSystemFont(ofSize: 24))
     
     lazy var totalPerPersonValueContainer = buildContainer()
-    lazy var totalPerPersonLabel = buildLabel(text: "POR PESSOA", textColor: .gray, font: .boldSystemFont(ofSize: 12))
+    lazy var totalPerPersonLabel = buildLabel(text: L10n.ContentContainerView.totalPerPerson, textColor: .gray, font: .boldSystemFont(ofSize: 12))
     lazy var totalPerPersonValue = buildLabel(text: .defaultValue, textColor: .mainAppColor, font: .boldSystemFont(ofSize: 24))
     
     // MARK: Grand Total
     lazy var grandTotalContainer = buildContainer(backgroundColor: .black.withAlphaComponent(0.8))
-    lazy var grandTotalLabel = buildLabel(text: "TOTAL GERAL", textColor: .gray, font: .boldSystemFont(ofSize: 12))
+    lazy var grandTotalLabel = buildLabel(text: L10n.ContentContainerView.grandTotal, textColor: .gray, font: .boldSystemFont(ofSize: 12))
     lazy var grandTotalValue = buildLabel(text: .defaultValue, textColor: .white, font: .boldSystemFont(ofSize: 32))
     lazy var shareButton = buildShareButton(target: self, selector: #selector(tappedShare))
     

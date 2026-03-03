@@ -9,7 +9,7 @@ import UIKit
 
 class HeaderView: UIView {
     
-    lazy var totalAmountLabel = buildLabel(text: "VALOR TOTAL DA CONTA", textColor: .white, textAlignment: .center, font: .systemFont(ofSize: 14, weight: .semibold))
+    lazy var totalAmountLabel = buildLabel(text: L10n.HeaderView.totalAmount, textColor: .white, textAlignment: .center, font: .systemFont(ofSize: 14, weight: .semibold))
     
     lazy var amountTextField: UITextField = {
         let tf = UITextField()
@@ -43,7 +43,7 @@ class HeaderView: UIView {
         return image
     }()
     
-    lazy var totalPeopleLabel = buildLabel(text: "1 Pessoa", textColor: .white, font: .systemFont(ofSize: 14, weight: .bold))
+    lazy var totalPeopleLabel = buildLabel(text: L10n.HeaderView.totalPeople, textColor: .white, font: .systemFont(ofSize: 14, weight: .bold))
     
     lazy var totalPeopleStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [totalPeopleImage, totalPeopleLabel])
