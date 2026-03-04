@@ -6,7 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		92652FCE2F58599A0092752D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92E08F2F2F4BB1D900E21851 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E08F362F4BB1D900E21851;
+			remoteInfo = CalculadoraGorjeta;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		92652FCA2F58599A0092752D /* CalculadoraGorjetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculadoraGorjetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E08F372F4BB1D900E21851 /* CalculadoraGorjeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculadoraGorjeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -21,6 +32,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		92652FCB2F58599A0092752D /* CalculadoraGorjetaTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CalculadoraGorjetaTests;
+			sourceTree = "<group>";
+		};
 		92E08F392F4BB1D900E21851 /* CalculadoraGorjeta */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -32,6 +48,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		92652FC72F58599A0092752D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E08F342F4BB1D900E21851 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				92E08F392F4BB1D900E21851 /* CalculadoraGorjeta */,
+				92652FCB2F58599A0092752D /* CalculadoraGorjetaTests */,
 				92E08F382F4BB1D900E21851 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				92E08F372F4BB1D900E21851 /* CalculadoraGorjeta.app */,
+				92652FCA2F58599A0092752D /* CalculadoraGorjetaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +86,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		92652FC92F58599A0092752D /* CalculadoraGorjetaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92652FD22F58599A0092752D /* Build configuration list for PBXNativeTarget "CalculadoraGorjetaTests" */;
+			buildPhases = (
+				92652FC62F58599A0092752D /* Sources */,
+				92652FC72F58599A0092752D /* Frameworks */,
+				92652FC82F58599A0092752D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92652FCF2F58599A0092752D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				92652FCB2F58599A0092752D /* CalculadoraGorjetaTests */,
+			);
+			name = CalculadoraGorjetaTests;
+			packageProductDependencies = (
+			);
+			productName = CalculadoraGorjetaTests;
+			productReference = 92652FCA2F58599A0092752D /* CalculadoraGorjetaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		92E08F362F4BB1D900E21851 /* CalculadoraGorjeta */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92E08F4A2F4BB1DA00E21851 /* Build configuration list for PBXNativeTarget "CalculadoraGorjeta" */;
@@ -93,6 +141,10 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					92652FC92F58599A0092752D = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 92E08F362F4BB1D900E21851;
+					};
 					92E08F362F4BB1D900E21851 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
@@ -114,11 +166,19 @@
 			projectRoot = "";
 			targets = (
 				92E08F362F4BB1D900E21851 /* CalculadoraGorjeta */,
+				92652FC92F58599A0092752D /* CalculadoraGorjetaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		92652FC82F58599A0092752D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E08F352F4BB1D900E21851 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +189,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		92652FC62F58599A0092752D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92E08F332F4BB1D900E21851 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,7 +205,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		92652FCF2F58599A0092752D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92E08F362F4BB1D900E21851 /* CalculadoraGorjeta */;
+			targetProxy = 92652FCE2F58599A0092752D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		92652FD02F58599A0092752D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 57HYQW6DAG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diggosilva.CalculadoraGorjetaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CalculadoraGorjeta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CalculadoraGorjeta";
+			};
+			name = Debug;
+		};
+		92652FD12F58599A0092752D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 57HYQW6DAG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diggosilva.CalculadoraGorjetaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CalculadoraGorjeta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CalculadoraGorjeta";
+			};
+			name = Release;
+		};
 		92E08F4B2F4BB1DA00E21851 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -325,6 +442,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		92652FD22F58599A0092752D /* Build configuration list for PBXNativeTarget "CalculadoraGorjetaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92652FD02F58599A0092752D /* Debug */,
+				92652FD12F58599A0092752D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		92E08F322F4BB1D900E21851 /* Build configuration list for PBXProject "CalculadoraGorjeta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
