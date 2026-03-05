@@ -69,7 +69,7 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
         recalculate()
     }
     
-    func clear() {
+    private func clear() {
         billAmount = 0
         tipPercentage = .zeroPercent
         numberOfPeople = 1
@@ -103,7 +103,7 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
     }
 }
 
-func formatCurrency(_ value: Double) -> String {
+private func formatCurrency(_ value: Double) -> String {
     let formatter = NumberFormatter()
     formatter.numberStyle = .currency
     formatter.locale = Locale.current

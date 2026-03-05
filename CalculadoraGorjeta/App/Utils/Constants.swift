@@ -12,5 +12,5 @@ extension UIColor {
 }
 
 extension String {
-    static let defaultValue: String = "R$0,00"
+    static let defaultValue: String = "R$ 0,00"
 }
