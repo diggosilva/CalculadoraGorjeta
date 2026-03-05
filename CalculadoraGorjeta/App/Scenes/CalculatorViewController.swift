@@ -22,7 +22,7 @@ class CalculatorViewController: UIViewController {
     override func loadView() {
         view = contentView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -105,7 +105,7 @@ extension CalculatorViewController: ContentContainerViewDelegate {
             
             let ok = UIAlertAction(title: L10n.Alert.ok, style: .default) { [weak self] _ in
                 guard let self = self,
-                    let text = textField.text, !text.isEmpty,
+                      let text = textField.text, !text.isEmpty,
                       let value = Double(text.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)) else {
                     return
                 }
