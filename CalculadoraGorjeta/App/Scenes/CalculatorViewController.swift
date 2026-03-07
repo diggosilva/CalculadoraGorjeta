@@ -86,7 +86,9 @@ extension CalculatorViewController: ContentContainerViewDelegate {
         setupUI()
     }
     
-    func didTapShare() {}
+    func didTapShare() {
+        shareFile()
+    }
     
     private func setTipPercentage(_ percentage: Tip) {
         viewModel.setTipAmount(percentage)
@@ -116,6 +118,28 @@ extension CalculatorViewController: ContentContainerViewDelegate {
             alert.addAction(UIAlertAction(title: L10n.Alert.cancel, style: .cancel, handler: nil))
         }
         present(alert, animated: true)
+    }
+    
+    func shareFile() {
+        let text = viewModel.exportData()
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd-HHmm"
+        formatter.locale = Locale.current
+        
+        let formatedDate = "\(formatter.string(from: Date()))"
+        
+        let fileName = "\(L10n.Share.fileName)-\(formatedDate).txt"
+        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent(fileName)
+        
+        do {
+            try text.write(to: tempURL, atomically: true, encoding: .utf8)
+            let activityVC = UIActivityViewController(activityItems: [tempURL], applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = view
+            present(activityVC, animated: true)
+        } catch {
+            print("\(L10n.Share.errorMessage): \(error)")
+        }
     }
 }
 

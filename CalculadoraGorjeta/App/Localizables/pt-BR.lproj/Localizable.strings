@@ -27,3 +27,13 @@
 "placeholder_alert" = "Exemplo: 30,00";
 "ok_button" = "Confirmar";
 "cancel_button" = "Cancelar";
+
+// MARK: ShareButton and Message
+"share_button_title" = "Compartilhar";
+"share_file_name" = "Calculadora de Gorjeta";
+"share_bill_amount" = "Valor da Conta";
+"share_tip" = "Gorjeta";
+"share_grand_total" = "Total Geral";
+"share_number_of_people" = "Número de Pessoas";
+"share_total_per_person" = "Total por Pessoa";
+"share_error_message" = "Erro ao criar arquivo";
