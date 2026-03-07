@@ -120,7 +120,7 @@ extension CalculatorViewController: ContentContainerViewDelegate {
         present(alert, animated: true)
     }
     
-    func shareFile() {
+    private func shareFile() {
         let text = viewModel.exportData()
         
         let formatter = DateFormatter()
