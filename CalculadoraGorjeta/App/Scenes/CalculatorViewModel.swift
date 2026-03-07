@@ -69,6 +69,10 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
         recalculate()
     }
     
+    func exportData() -> String {
+        return "\(L10n.Share.billAmount): \(formatCurrency(billAmount))\n\(L10n.Share.tip): \(totalTipText)\n\(L10n.Share.grandTotal): \(totalAmountText)\n\(L10n.Share.numberOfPeople): \(numberOfPeople)\n\(L10n.Share.totalPerPerson): \(totalPerPersonText)"
+    }
+    
     private func clear() {
         billAmount = 0
         tipPercentage = .zeroPercent

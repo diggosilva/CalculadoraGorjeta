@@ -33,4 +33,15 @@ enum L10n {
         static let ok = NSLocalizedString("ok_button", comment: "")
         static let cancel = NSLocalizedString("cancel_button", comment: "")
     }
+    
+    enum Share {
+        static let title = NSLocalizedString("share_button_title", comment: "")
+        static let fileName = NSLocalizedString("share_file_name", comment: "")
+        static let billAmount = NSLocalizedString("share_bill_amount", comment: "")
+        static let tip = NSLocalizedString("share_tip", comment: "")
+        static let grandTotal = NSLocalizedString("share_grand_total", comment: "")
+        static let numberOfPeople = NSLocalizedString("share_number_of_people", comment: "")
+        static let totalPerPerson = NSLocalizedString("share_total_per_person", comment: "")
+        static let errorMessage = NSLocalizedString("share_error_message", comment: "")
+    }
 }

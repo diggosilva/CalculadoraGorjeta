@@ -27,3 +27,13 @@
 "placeholder_alert" = "Example: 30.00";
 "ok_button" = "Confirm";
 "cancel_button" = "Cancel";
+
+// MARK: ShareButton and Message
+"share_button_title" = "Share";
+"share_file_name" = "Tip Calculator";
+"share_bill_amount" = "Bill Amount";
+"share_tip" = "Tip";
+"share_grand_total" = "Grand Total";
+"share_number_of_people" = "Number of People";
+"share_total_per_person" = "Total per Person";
+"share_error_message" = "Error creating file";
