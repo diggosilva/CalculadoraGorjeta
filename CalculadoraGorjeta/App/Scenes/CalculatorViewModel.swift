@@ -106,13 +106,3 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
         totalPerPersonText = formatCurrency(totalPerPerson)
     }
 }
-
-private func formatCurrency(_ value: Double) -> String {
-    let formatter = NumberFormatter()
-    formatter.numberStyle = .currency
-    formatter.locale = Locale.current
-    formatter.minimumFractionDigits = 2
-    formatter.maximumFractionDigits = 2
-    formatter.usesGroupingSeparator = true
-    return formatter.string(from: NSNumber(value: value)) ?? .defaultValue
-}
