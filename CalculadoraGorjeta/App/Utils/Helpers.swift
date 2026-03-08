@@ -100,3 +100,13 @@ func buildShareButton(target: Any?, selector: Selector) -> UIButton {
     button.addTarget(target, action: selector, for: .touchUpInside)
     return button
 }
+
+func formatCurrency(_ value: Double) -> String {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .currency
+    formatter.locale = Locale.current
+    formatter.minimumFractionDigits = 2
+    formatter.maximumFractionDigits = 2
+    formatter.usesGroupingSeparator = true
+    return formatter.string(from: NSNumber(value: value)) ?? .defaultValue
+}
