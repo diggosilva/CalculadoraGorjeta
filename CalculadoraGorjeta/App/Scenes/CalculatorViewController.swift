@@ -101,22 +101,28 @@ extension CalculatorViewController: ContentContainerViewDelegate {
     
     private func showCustomTipAlert() {
         let alert = UIAlertController(title: L10n.Alert.title, message: L10n.Alert.message, preferredStyle: .alert)
-        alert.addTextField { (textField) in
+        alert.addTextField { textField in
             textField.placeholder = L10n.Alert.placeholder
             textField.keyboardType = .decimalPad
+        }
+        
+        let ok = UIAlertAction(title: L10n.Alert.ok, style: .default) { [weak self, weak alert] _ in
+            guard let self = self,
+                  let text = alert?.textFields?.first?.text,
+                  !text.isEmpty else { return }
             
-            let ok = UIAlertAction(title: L10n.Alert.ok, style: .default) { [weak self] _ in
-                guard let self = self,
-                      let text = textField.text, !text.isEmpty,
-                      let value = Double(text.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)) else {
-                    return
-                }
+            let formatter = NumberFormatter()
+            formatter.locale = .current
+            formatter.numberStyle = .decimal
+            
+            if let number = formatter.number(from: text) {
+                let value = number.doubleValue
                 viewModel.setTipAmount(.customTip(value))
                 setupUI()
             }
-            alert.addAction(ok)
-            alert.addAction(UIAlertAction(title: L10n.Alert.cancel, style: .cancel, handler: nil))
         }
+        alert.addAction(ok)
+        alert.addAction(UIAlertAction(title: L10n.Alert.cancel, style: .cancel))
         present(alert, animated: true)
     }
     
