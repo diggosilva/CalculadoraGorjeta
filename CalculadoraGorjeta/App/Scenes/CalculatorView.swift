@@ -51,4 +51,9 @@ final class CalculatorView: UIView {
         contentContainerView.layer.masksToBounds = true
         backgroundColor = .mainAppColor
     }
+    
+    func resetData() {
+        headerView.amountTextField.text = nil
+        contentContainerView.setButtonsEnabled(false)
+    }
 }
