@@ -27,6 +27,7 @@ protocol CalculatorViewModelProtocol {
     func setTipAmount(_ tip: Tip)
     func decreasePeopleCount()
     func increasePeopleCount()
+    func clear()
 }
 
 final class CalculatorViewModel: CalculatorViewModelProtocol {
@@ -73,7 +74,7 @@ final class CalculatorViewModel: CalculatorViewModelProtocol {
         return "\(L10n.Share.billAmount): \(formatCurrency(billAmount))\n\(L10n.Share.tip): \(totalTipText)\n\(L10n.Share.grandTotal): \(totalAmountText)\n\(L10n.Share.numberOfPeople): \(numberOfPeople)\n\(L10n.Share.totalPerPerson): \(totalPerPersonText)"
     }
     
-    private func clear() {
+    func clear() {
         billAmount = 0
         tipPercentage = .zeroPercent
         numberOfPeople = 1
