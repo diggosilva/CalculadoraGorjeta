@@ -31,6 +31,7 @@ class CalculatorViewController: UIViewController {
     
     private func setupNavigationBar() {
         navigationItem.title = L10n.Calculator.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "eraser.fill"), style: .plain, target: self, action: #selector(didTapClearUI))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -47,6 +48,13 @@ class CalculatorViewController: UIViewController {
         contentView.contentContainerView.totalPerPersonValue.text = viewModel.totalPerPersonText
         contentView.contentContainerView.grandTotalValue.text = viewModel.totalAmountText
         contentView.contentContainerView.totalPeopleValue.text = "\(viewModel.numberOfPeople)"
+    }
+    
+    @objc private func didTapClearUI() {
+        viewModel.clear()
+        contentView.resetData()
+        setupUI()
+        view.endEditing(true)
     }
 }
 
