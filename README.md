@@ -42,6 +42,8 @@ An iOS app developed for studying, never stop studying, always move forward.
 - [x] **Per Person Calculation**: Automatically calculates and displays the amount each person should pay.
 - [x] **Real-Time Updates**: Values update instantly when changing tip percentage or number of people.
 - [x] **UIKit Interface**: Entire interface built with UIKit and ViewCode (no Storyboards).
+- [x] **Share Button**: You can share the Information Bill via AirDrop, WhatsApp, and Messaging.
+- [x] **Clear Button**: Clear UI data by pressing the eraser button in the navigation bar.
 
 ## Setup
 
