@@ -77,6 +77,7 @@ class ContentContainerView: UIView {
         setupConstraints()
         setupConfigurations()
         setButtonsEnabled(false)
+        setupIdentifiers()
     }
     
     private func setupHierarchy() {
@@ -178,6 +179,21 @@ class ContentContainerView: UIView {
     
     private func setupConfigurations() {
         backgroundColor = .secondarySystemBackground
+    }
+    
+    private func setupIdentifiers() {
+        customTipButton.accessibilityIdentifier = "customTipButton"
+        tenPercentButton.accessibilityIdentifier = "tenPercentButton"
+        fifteenPercentButton.accessibilityIdentifier = "fifteenPercentButton"
+        twentyPercentButton.accessibilityIdentifier = "twentyPercentButton"
+        twentyFivePercentButton.accessibilityIdentifier = "twentyFivePercentButton"
+        minusButton.accessibilityIdentifier = "minusButton"
+        plusButton.accessibilityIdentifier = "plusButton"
+        totalPeopleValue.accessibilityIdentifier = "totalPeopleValue"
+        totalTipValue.accessibilityIdentifier = "totalTipValue"
+        totalPerPersonValue.accessibilityIdentifier = "totalPerPersonValue"
+        grandTotalValue.accessibilityIdentifier = "grandTotalValue"
+        shareButton.accessibilityIdentifier = "shareButton"
     }
     
     func setButtonsEnabled(_ isEnabled: Bool) {
