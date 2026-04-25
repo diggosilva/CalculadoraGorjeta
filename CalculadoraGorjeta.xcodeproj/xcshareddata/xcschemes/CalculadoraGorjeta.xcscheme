@@ -41,6 +41,17 @@
                ReferencedContainer = "container:CalculadoraGorjeta.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "926CA8912F9C118D0093BD1F"
+               BuildableName = "CalculadoraGorjetaUITests.xctest"
+               BlueprintName = "CalculadoraGorjetaUITests"
+               ReferencedContainer = "container:CalculadoraGorjeta.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
