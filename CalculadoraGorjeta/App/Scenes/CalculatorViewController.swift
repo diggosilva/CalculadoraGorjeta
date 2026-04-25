@@ -31,7 +31,9 @@ class CalculatorViewController: UIViewController {
     
     private func setupNavigationBar() {
         navigationItem.title = L10n.Calculator.title
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "eraser.fill"), style: .plain, target: self, action: #selector(didTapClearUI))
+        let clearButton = UIBarButtonItem(image: UIImage(systemName: "eraser.fill"), style: .plain, target: self, action: #selector(didTapClearUI))
+        clearButton.accessibilityIdentifier = "clearButton"
+        navigationItem.rightBarButtonItem = clearButton
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -109,9 +111,12 @@ extension CalculatorViewController: ContentContainerViewDelegate {
     
     private func showCustomTipAlert() {
         let alert = UIAlertController(title: L10n.Alert.title, message: L10n.Alert.message, preferredStyle: .alert)
+        alert.view.accessibilityIdentifier = "customTipAlert"
+        
         alert.addTextField { textField in
             textField.placeholder = L10n.Alert.placeholder
             textField.keyboardType = .decimalPad
+            textField.accessibilityIdentifier = "customTipTextField"
         }
         
         let ok = UIAlertAction(title: L10n.Alert.ok, style: .default) { [weak self, weak alert] _ in
