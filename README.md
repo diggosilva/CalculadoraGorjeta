@@ -24,6 +24,8 @@ An iOS app developed for studying, never stop studying, always move forward.
 - View Code (UIKit)
 - Custom elements
 - Dark Mode
+- Unit tests
+- UI tests
 
 ## Requirements
 
