@@ -23,17 +23,17 @@ final class CalculadoraGorjetaUITests: XCTestCase {
 
     func testInitialState() throws {
         // Verifica se os campos de resultado iniciam com o valor padrão
-        XCTAssertEqual(app.staticTexts["grandTotalValue"].label, "R$ 0,00")
-        XCTAssertEqual(app.staticTexts["totalTipValue"].label, "R$ 0,00")
-        XCTAssertEqual(app.staticTexts["totalPerPersonValue"].label, "R$ 0,00")
-        XCTAssertEqual(app.staticTexts["totalPeopleValue"].label, "1")
+        XCTAssertEqual(app.staticTexts[DSIdentifiers.grandTotalValue].label, "R$ 0,00")
+        XCTAssertEqual(app.staticTexts[DSIdentifiers.totalTipValue].label, "R$ 0,00")
+        XCTAssertEqual(app.staticTexts[DSIdentifiers.totalPerPersonValue].label, "R$ 0,00")
+        XCTAssertEqual(app.staticTexts[DSIdentifiers.totalPeopleValue].label, "1")
         
         // Verifica se os botões estão desabilitados inicialmente (alpha reduzido conforme sua lógica)
-        XCTAssertFalse(app.buttons["tenPercentButton"].isEnabled)
+        XCTAssertFalse(app.buttons[DSIdentifiers.tenPercentButton].isEnabled)
     }
     
     func testFullCalculationFlow() throws {
-        let amountTextField = app.textFields["amountTextField"]
+        let amountTextField = app.textFields[DSIdentifiers.amountTextField]
         XCTAssertTrue(amountTextField.exists)
         
         // Insere 100,00 (Digitando 10000 devido à máscara de moeda)
@@ -41,65 +41,65 @@ final class CalculadoraGorjetaUITests: XCTestCase {
         amountTextField.typeText("10000")
         
         // Seleciona 10% de gorjeta
-        app.buttons["tenPercentButton"].tap()
+        app.buttons[DSIdentifiers.tenPercentButton].tap()
         
         // Verifica cálculos para 1 pessoa
-        XCTAssertTrue(app.staticTexts["totalTipValue"].label.contains("10,00"))
-        XCTAssertTrue(app.staticTexts["grandTotalValue"].label.contains("110,00"))
-        XCTAssertTrue(app.staticTexts["totalPerPersonValue"].label.contains("110,00"))
+        XCTAssertTrue(app.staticTexts[DSIdentifiers.totalTipValue].label.contains("10,00"))
+        XCTAssertTrue(app.staticTexts[DSIdentifiers.grandTotalValue].label.contains("110,00"))
+        XCTAssertTrue(app.staticTexts[DSIdentifiers.totalPerPersonValue].label.contains("110,00"))
         
         // Divide para 2 pessoas
-        app.buttons["plusButton"].tap()
-        XCTAssertEqual(app.staticTexts["totalPeopleValue"].label, "2")
-        XCTAssertTrue(app.staticTexts["totalPerPersonValue"].label.contains("55,00"))
+        app.buttons[DSIdentifiers.plusButton].tap()
+        XCTAssertEqual(app.staticTexts[DSIdentifiers.totalPeopleValue].label, "2")
+        XCTAssertTrue(app.staticTexts[DSIdentifiers.totalPerPersonValue].label.contains("55,00"))
         
         // Testa decremento de pessoas (não deve baixar de 1)
-        app.buttons["minusButton"].tap()
-        app.buttons["minusButton"].tap()
-        XCTAssertEqual(app.staticTexts["totalPeopleValue"].label, "1")
+        app.buttons[DSIdentifiers.minusButton].tap()
+        app.buttons[DSIdentifiers.minusButton].tap()
+        XCTAssertEqual(app.staticTexts[DSIdentifiers.totalPeopleValue].label, "1")
     }
     
     func testCustomTipAlert() throws {
-        let amountTextField = app.textFields["amountTextField"]
+        let amountTextField = app.textFields[DSIdentifiers.amountTextField]
         amountTextField.tap()
         amountTextField.typeText("10000")
         
         // Abre alerta de gorjeta personalizada
-        app.buttons["customTipButton"].tap()
+        app.buttons[DSIdentifiers.customTipButton].tap()
         
-        let alert = app.alerts["customTipAlert"]
+        let alert = app.alerts[DSIdentifiers.customTipAlert]
         XCTAssertTrue(alert.exists)
         
-        let customTextField = alert.textFields["customTipTextField"]
+        let customTextField = alert.textFields[DSIdentifiers.customTipTextField]
         customTextField.typeText("50") // 50 reais de gorjeta fixa
         alert.buttons.element(boundBy: 1).tap() // Clica no OK (segundo botão)
         
-        XCTAssertTrue(app.staticTexts["totalTipValue"].label.contains("50,00"))
-        XCTAssertTrue(app.staticTexts["grandTotalValue"].label.contains("150,00"))
+        XCTAssertTrue(app.staticTexts[DSIdentifiers.totalTipValue].label.contains("50,00"))
+        XCTAssertTrue(app.staticTexts[DSIdentifiers.grandTotalValue].label.contains("150,00"))
     }
     
     func testClearButton() throws {
-        let amountTextField = app.textFields["amountTextField"]
+        let amountTextField = app.textFields[DSIdentifiers.amountTextField]
         amountTextField.tap()
         amountTextField.typeText("25000")
-        app.buttons["twentyPercentButton"].tap()
+        app.buttons[DSIdentifiers.twentyPercentButton].tap()
         
         // Clica no botão de limpar (borracha) na Navigation Bar
-        app.buttons["clearButton"].tap()
+        app.buttons[DSIdentifiers.clearButton].tap()
         
-        XCTAssertEqual(app.staticTexts["grandTotalValue"].label, "R$ 0,00")
+        XCTAssertEqual(app.staticTexts[DSIdentifiers.grandTotalValue].label, "R$ 0,00")
         XCTAssertEqual(amountTextField.label, "") // TextField vazio
-        XCTAssertFalse(app.buttons["shareButton"].isEnabled)
+        XCTAssertFalse(app.buttons[DSIdentifiers.shareButton].isEnabled)
     }
     
     func testShareAction() throws {
-        let amountTextField = app.textFields["amountTextField"]
+        let amountTextField = app.textFields[DSIdentifiers.amountTextField]
         amountTextField.tap()
         amountTextField.typeText("10000")
         
         app/*@START_MENU_TOKEN@*/.staticTexts["1 Person"]/*[[".otherElements.staticTexts[\"1 Person\"]",".staticTexts[\"1 Person\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.firstMatch.tap()
         
-        let shareButton = app.buttons["shareButton"]
+        let shareButton = app.buttons[DSIdentifiers.shareButton]
         XCTAssertTrue(shareButton.isEnabled)
         shareButton.tap()
         
