@@ -182,18 +182,18 @@ class ContentContainerView: UIView {
     }
     
     private func setupIdentifiers() {
-        customTipButton.accessibilityIdentifier = "customTipButton"
-        tenPercentButton.accessibilityIdentifier = "tenPercentButton"
-        fifteenPercentButton.accessibilityIdentifier = "fifteenPercentButton"
-        twentyPercentButton.accessibilityIdentifier = "twentyPercentButton"
-        twentyFivePercentButton.accessibilityIdentifier = "twentyFivePercentButton"
-        minusButton.accessibilityIdentifier = "minusButton"
-        plusButton.accessibilityIdentifier = "plusButton"
-        totalPeopleValue.accessibilityIdentifier = "totalPeopleValue"
-        totalTipValue.accessibilityIdentifier = "totalTipValue"
-        totalPerPersonValue.accessibilityIdentifier = "totalPerPersonValue"
-        grandTotalValue.accessibilityIdentifier = "grandTotalValue"
-        shareButton.accessibilityIdentifier = "shareButton"
+        customTipButton.accessibilityIdentifier = DSIdentifiers.customTipButton
+        tenPercentButton.accessibilityIdentifier = DSIdentifiers.tenPercentButton
+        fifteenPercentButton.accessibilityIdentifier = DSIdentifiers.fifteenPercentButton
+        twentyPercentButton.accessibilityIdentifier = DSIdentifiers.twentyPercentButton
+        twentyFivePercentButton.accessibilityIdentifier = DSIdentifiers.twentyFivePercentButton
+        minusButton.accessibilityIdentifier = DSIdentifiers.minusButton
+        plusButton.accessibilityIdentifier = DSIdentifiers.plusButton
+        totalPeopleValue.accessibilityIdentifier = DSIdentifiers.totalPeopleValue
+        totalTipValue.accessibilityIdentifier = DSIdentifiers.totalTipValue
+        totalPerPersonValue.accessibilityIdentifier = DSIdentifiers.totalPerPersonValue
+        grandTotalValue.accessibilityIdentifier = DSIdentifiers.grandTotalValue
+        shareButton.accessibilityIdentifier = DSIdentifiers.shareButton
     }
     
     func setButtonsEnabled(_ isEnabled: Bool) {
