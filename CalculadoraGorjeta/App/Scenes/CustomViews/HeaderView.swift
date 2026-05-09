@@ -23,7 +23,7 @@ class HeaderView: UIView {
         tf.backgroundColor = .clear
         tf.adjustsFontSizeToFitWidth = true
         tf.minimumFontSize = 24
-        tf.accessibilityIdentifier = "amountTextField"
+        tf.accessibilityIdentifier = DSIdentifiers.amountTextField
         
         tf.attributedPlaceholder = NSAttributedString(
             string: .defaultValue,
