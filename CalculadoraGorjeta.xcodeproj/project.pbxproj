@@ -30,6 +30,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		92B7CF392FACD14600C605EC /* Exceptions for "CalculadoraGorjeta" folder in "CalculadoraGorjetaUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Shared/DSIdentifiers.swift,
+			);
+			target = 926CA8912F9C118D0093BD1F /* CalculadoraGorjetaUITests */;
+		};
 		92E08F492F4BB1DA00E21851 /* Exceptions for "CalculadoraGorjeta" folder in "CalculadoraGorjeta" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -54,6 +61,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				92E08F492F4BB1DA00E21851 /* Exceptions for "CalculadoraGorjeta" folder in "CalculadoraGorjeta" target */,
+				92B7CF392FACD14600C605EC /* Exceptions for "CalculadoraGorjeta" folder in "CalculadoraGorjetaUITests" target */,
 			);
 			path = CalculadoraGorjeta;
 			sourceTree = "<group>";
